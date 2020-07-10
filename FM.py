@@ -42,7 +42,6 @@ def SGD_FM(dataMatrix, classLabels, k, iter):
     :param classLabels: 类别矩阵
     :param k:           辅助向量的大小
     :param iter:        迭代次数
-    :return:
     '''
     # dataMatrix用的是mat, classLabels是列表
     m, n = shape(dataMatrix)  #矩阵的行列数，即样本数和特征数
@@ -57,8 +56,8 @@ def SGD_FM(dataMatrix, classLabels, k, iter):
         for x in range(m):  # 随机优化，每次只使用一个样本
             # 二阶项的计算
             inter_1 = dataMatrix[x] * v
-            inter_2 = multiply(dataMatrix[x],
-                               dataMatrix[x]) * multiply(v, v)  # 二阶交叉项的计算
+            inter_2 = multiply(dataMatrix[x], dataMatrix[x]) * multiply(
+                v, v)  # 二阶交叉项的计算
             interaction = sum(multiply(inter_1, inter_1) -
                               inter_2) / 2.  # 二阶交叉项计算完成
 
