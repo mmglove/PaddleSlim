@@ -41,7 +41,6 @@ def SGD_FM(dataMatrix, classLabels, k, iter):
     :param dataMatrix:  特征矩阵
     :param classLabels: 类别矩阵
     :param k:           辅助向量的大小
-    :param iter:        迭代次数
     '''
     # dataMatrix用的是mat, classLabels是列表
     m, n = shape(dataMatrix)  #矩阵的行列数，即样本数和特征数
